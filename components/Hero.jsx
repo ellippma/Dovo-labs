@@ -78,7 +78,15 @@ export default function Hero() {
             </a>.
           </div>
 
-          <div className="hero-cta-row">
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 32, alignSelf: 'start', justifySelf: 'end' }}>
+          <div className="avatar-card">
+            <span className="avatar-name">★ ETHAN.JPG</span>
+            <img src="/ethan-avatar.png" alt="Ethan Lippman" />
+            <span className="avatar-tag">RevOps · AI · GTM</span>
+          </div>
+          <div className="hero-cta-row" style={{ justifyContent: 'flex-start', marginTop: 8 }}>
             <a
               className="btn btn-pink"
               href="https://youvegotmeetings.com/book/ethan"
@@ -99,16 +107,7 @@ export default function Hero() {
             >
               See what I built
             </a>
-            <span className="hero-stat">
-              <span style={{ color: 'var(--pink)' }}>♥</span> 15+ years GTM &amp; product
-            </span>
           </div>
-        </div>
-
-        <div className="avatar-card">
-          <span className="avatar-name">★ ETHAN.JPG</span>
-          <img src="/ethan-avatar.png" alt="Ethan Lippman" />
-          <span className="avatar-tag">RevOps · AI · GTM</span>
         </div>
       </div>
     </section>
