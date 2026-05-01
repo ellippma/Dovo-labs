@@ -67,7 +67,8 @@ export default function Hero() {
             marginBottom: 24,
             boxShadow: '6px 6px 0 var(--cyan)',
           }}>
-            ▶ THE FASTEST WAY TO GET VALUE OUT OF THIS PAGE:{' '}
+            ▶ THE FASTEST WAY TO GET VALUE OUT OF THIS PAGE:
+            <br />
             <a
               href="https://youvegotmeetings.com/book/ethan"
               target="_blank"
