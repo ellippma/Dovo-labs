@@ -50,8 +50,8 @@ export default function Hero() {
           </h1>
 
           <p className="hero-tagline">
-            Go-to-market strategist, competitive intel nerd, and AI builder.
-            I help companies wire <em>actually working</em> revenue engines —
+            Go-to-market strategist, competitive intel nerd, and custom AI builder.
+            I help companies wire <em>actually working</em> GTM strategies —
             then ship the bespoke AI tooling that runs them.
           </p>
 
