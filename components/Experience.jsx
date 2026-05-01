@@ -81,7 +81,7 @@ export default function Experience() {
         <span className="eyebrow cyan">★ TRACK.RECORD ★</span>
         <h2 className="section-title">Where I&apos;ve put in the reps.</h2>
         <p className="section-sub">
-          Enterprise SaaS, public companies, a major acquisition, and a long
+          Enterprise SaaS, public companies, major acquisitions, and a long
           earlier run that taught me the engine from sales-floor to roadmap.
           Names redacted on purpose — happy to walk through specifics on a call.
         </p>
@@ -101,9 +101,7 @@ export default function Experience() {
               </div>
               <div className="exp-body">
                 <h3>{e.role}</h3>
-                <div className="exp-tags">
-                  {e.tags.map((t, j) => <span key={j} className="exp-tag">{t}</span>)}
-                </div>
+
                 <ul>
                   {e.bullets.map((b, j) => (
                     <li key={j} className={j % 3 === 1 ? 'cyan' : j % 3 === 2 ? 'yellow' : ''}>{b}</li>
