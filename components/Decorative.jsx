@@ -74,8 +74,8 @@ export function ZigZag({ width = 100, color = 'var(--purple)' }) {
 export function BrandMark({ size = 72 }) {
   return (
     <img
-      src="/ygm-logo.png"
-      alt="YouveGotMeetings"
+      src="/dovo-labs-logo.png"
+      alt="Dovo Labs"
       width={size}
       height={size}
       style={{
