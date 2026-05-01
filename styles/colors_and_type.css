@@ -1,0 +1,169 @@
+/* ================================
+   DOVO LABS — DESIGN SYSTEM
+   Colors + Type tokens
+   90s "Saved by the Bell" aesthetic
+   ================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Monoton&family=Space+Grotesk:wght@400;500;700&family=VT323&family=Caveat+Brush&display=swap");
+
+:root {
+  /* ---------- Color: paper / ink ---------- */
+  --cream: #fef6e4;        /* default page bg */
+  --cream-deep: #fbe9c4;   /* muted bg / inset cards */
+  --paper: #fffaf0;        /* card/panel bg */
+  --ink: #0d0d0d;          /* primary text + borders */
+  --ink-soft: #2a2a2a;     /* secondary text */
+
+  /* ---------- Color: brights (the Bayside palette) ---------- */
+  --pink: #ff5b9e;
+  --pink-deep: #e83e84;
+  --cyan: #3dd9eb;
+  --cyan-deep: #1cb5c7;
+  --yellow: #ffd23f;
+  --purple: #5b2a86;
+  --purple-deep: #3b1660;
+  --orange: #ff8c42;
+  --green: #7ed957;
+
+  /* ---------- Semantic colors ---------- */
+  --fg1: var(--ink);
+  --fg2: var(--ink-soft);
+  --fg-inverse: var(--cream);
+  --bg1: var(--cream);
+  --bg2: var(--cream-deep);
+  --surface: var(--paper);
+  --accent: var(--pink);
+  --accent-2: var(--cyan);
+  --accent-3: var(--yellow);
+  --positive: var(--green);
+  --warn: var(--orange);
+  --danger: var(--pink-deep);
+
+  /* ---------- Borders ---------- */
+  --border:        3px solid var(--ink);
+  --border-thin:   2px solid var(--ink);
+  --border-thick:  5px solid var(--ink);
+  --radius-0: 0px;        /* default — squared, 90s. */
+  --radius-1: 4px;        /* rare — small chips only */
+
+  /* ---------- Hard offset shadow system (signature) ---------- */
+  --shadow-hard-xs: 2px 2px 0 var(--ink);
+  --shadow-hard-sm: 4px 4px 0 var(--ink);
+  --shadow-hard:    6px 6px 0 var(--ink);
+  --shadow-hard-lg: 10px 10px 0 var(--ink);
+  --shadow-hard-xl: 12px 12px 0 var(--ink);
+  /* Colored offset shadow (decorative pop) */
+  --shadow-pink-lg: 10px 10px 0 var(--pink);
+
+  /* ---------- Spacing (4px base) ---------- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+  --sp-9: 56px;
+  --sp-10: 80px;
+
+  /* ---------- Typography: families ---------- */
+  --font-display:     "Bungee", system-ui, sans-serif;
+  --font-display-alt: "Monoton", "Bungee", system-ui, sans-serif;
+  --font-body:        "Space Grotesk", system-ui, sans-serif;
+  --font-mono:        "VT323", "Courier New", monospace;
+  --font-script:      "Caveat Brush", cursive;
+
+  /* ---------- Typography: scale ---------- */
+  --fs-mega:    110px;  /* hero */
+  --fs-h1:      56px;
+  --fs-h2:      40px;
+  --fs-h3:      28px;
+  --fs-h4:      22px;
+  --fs-body-lg: 18px;
+  --fs-body:    15px;
+  --fs-small:   13px;
+  --fs-mono:    16px;   /* VT323 reads larger */
+  --fs-eyebrow: 11px;
+
+  /* ---------- Motion ---------- */
+  --ease-snap: cubic-bezier(.2,.8,.2,1);
+  --dur-fast: 80ms;
+  --dur-base: 200ms;
+  --dur-slow: 600ms;
+}
+
+/* ================================
+   SEMANTIC TYPE STYLES
+   ================================ */
+.dvo-h1, h1.dvo {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  line-height: 1;
+  letter-spacing: 1px;
+  color: var(--fg1);
+  margin: 0;
+}
+.dvo-mega {
+  font-family: var(--font-display-alt);
+  font-size: var(--fs-mega);
+  line-height: 0.95;
+  color: var(--purple);
+  text-shadow: 6px 6px 0 var(--yellow), 12px 12px 0 var(--ink);
+  letter-spacing: 2px;
+  margin: 0;
+}
+.dvo-h2, h2.dvo {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  line-height: 1.05;
+  color: var(--fg1);
+  margin: 0;
+}
+.dvo-h3, h3.dvo {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  line-height: 1.1;
+  margin: 0;
+}
+.dvo-h4 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  letter-spacing: 0.5px;
+}
+.dvo-body, p.dvo {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  color: var(--fg1);
+}
+.dvo-body-lg {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-lg);
+  line-height: 1.5;
+}
+.dvo-mono, code.dvo {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 1px;
+}
+.dvo-script {
+  font-family: var(--font-script);
+}
+.dvo-eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.dvo-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  background: var(--ink);
+  color: var(--yellow);
+  border: var(--border-thin);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

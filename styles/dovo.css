@@ -1,0 +1,307 @@
+/* ================================
+   CLAUDENDLY — 90s Saved by the Bell
+   ================================ */
+
+:root {
+  --cream: #fef6e4;
+  --cream-deep: #fbe9c4;
+  --pink: #ff5b9e;
+  --pink-deep: #e83e84;
+  --cyan: #3dd9eb;
+  --cyan-deep: #1cb5c7;
+  --yellow: #ffd23f;
+  --purple: #5b2a86;
+  --purple-deep: #3b1660;
+  --orange: #ff8c42;
+  --green: #7ed957;
+  --ink: #0d0d0d;
+  --ink-soft: #2a2a2a;
+  --paper: #fffaf0;
+
+  --shadow-hard: 6px 6px 0 var(--ink);
+  --shadow-hard-sm: 4px 4px 0 var(--ink);
+  --shadow-hard-lg: 10px 10px 0 var(--ink);
+
+  --border: 3px solid var(--ink);
+  --border-thin: 2px solid var(--ink);
+  --border-thick: 5px solid var(--ink);
+
+  --font-display: "Bungee", "Bungee Inline", system-ui, sans-serif;
+  --font-display-alt: "Monoton", "Bungee", system-ui, sans-serif;
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "VT323", "Courier New", monospace;
+  --font-script: "Caveat Brush", cursive;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  font-size: 16px;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+/* ---------- Decorative bg patterns ---------- */
+.pattern-confetti {
+  background-image:
+    radial-gradient(circle at 12% 20%, var(--pink) 0 4px, transparent 5px),
+    radial-gradient(circle at 80% 30%, var(--cyan) 0 5px, transparent 6px),
+    radial-gradient(circle at 30% 70%, var(--yellow) 0 4px, transparent 5px),
+    radial-gradient(circle at 65% 80%, var(--purple) 0 4px, transparent 5px),
+    radial-gradient(circle at 90% 60%, var(--orange) 0 3px, transparent 4px),
+    radial-gradient(circle at 20% 90%, var(--green) 0 4px, transparent 5px);
+  background-size: 220px 220px;
+}
+.pattern-checker {
+  background-image:
+    linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%),
+    linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+.pattern-zigzag {
+  background:
+    linear-gradient(135deg, var(--cyan) 25%, transparent 25%) -10px 0,
+    linear-gradient(225deg, var(--cyan) 25%, transparent 25%) -10px 0,
+    linear-gradient(315deg, var(--cyan) 25%, transparent 25%),
+    linear-gradient(45deg, var(--cyan) 25%, transparent 25%);
+  background-size: 20px 20px;
+  background-color: var(--cream);
+}
+.pattern-dots {
+  background-image: radial-gradient(circle, var(--ink) 1.5px, transparent 2px);
+  background-size: 18px 18px;
+}
+.pattern-grid {
+  background-image:
+    linear-gradient(var(--ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ink) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.08;
+}
+
+/* ---------- Reusable elements ---------- */
+.box {
+  border: var(--border);
+  background: var(--paper);
+  box-shadow: var(--shadow-hard);
+}
+.box-pink { background: var(--pink); color: white; }
+.box-cyan { background: var(--cyan); color: var(--ink); }
+.box-yellow { background: var(--yellow); color: var(--ink); }
+.box-purple { background: var(--purple); color: white; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  background: var(--yellow);
+  color: var(--ink);
+  border: var(--border);
+  box-shadow: var(--shadow-hard-sm);
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 80ms ease, box-shadow 80ms ease;
+  user-select: none;
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+.btn:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--ink); }
+
+.btn-pink { background: var(--pink); color: white; }
+.btn-cyan { background: var(--cyan); }
+.btn-purple { background: var(--purple); color: white; }
+.btn-ghost { background: var(--paper); }
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  background: var(--ink);
+  color: var(--yellow);
+  border: var(--border-thin);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ---------- decorative SVG-ready shapes ---------- */
+.squiggle {
+  display: inline-block;
+  width: 60px;
+  height: 14px;
+  background:
+    radial-gradient(circle at 25% 50%, var(--pink) 35%, transparent 36%) 0 0/20px 14px no-repeat,
+    radial-gradient(circle at 75% 50%, var(--pink) 35%, transparent 36%) 20px 0/20px 14px no-repeat;
+}
+
+.starburst {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: var(--yellow);
+  clip-path: polygon(
+    50% 0%, 60% 18%, 78% 8%, 75% 28%, 95% 25%, 84% 42%,
+    100% 50%, 84% 58%, 95% 75%, 75% 72%, 78% 92%, 60% 82%,
+    50% 100%, 40% 82%, 22% 92%, 25% 72%, 5% 75%, 16% 58%,
+    0% 50%, 16% 42%, 5% 25%, 25% 28%, 22% 8%, 40% 18%
+  );
+}
+
+/* ---------- App shell ---------- */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+  background: var(--ink);
+  color: var(--cream);
+  border-bottom: var(--border-thick);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: var(--yellow);
+  text-decoration: none;
+}
+.brand-mark {
+  width: 34px; height: 34px;
+  background: var(--pink);
+  border: var(--border-thin);
+  border-color: var(--cream);
+  display: grid; place-items: center;
+  font-family: var(--font-display);
+  color: var(--ink);
+  transform: rotate(-6deg);
+}
+.nav-links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.nav-links a {
+  color: var(--cream);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.nav-links a:hover { color: var(--cyan); }
+.nav-links a.active { color: var(--yellow); }
+
+/* ---------- Forms ---------- */
+.field {
+  display: flex; flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.field label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.field input, .field textarea, .field select {
+  padding: 10px 12px;
+  border: var(--border);
+  background: var(--paper);
+  font-family: var(--font-body);
+  font-size: 15px;
+  outline: none;
+  box-shadow: inset 0 0 0 0 transparent;
+}
+.field input:focus, .field textarea:focus, .field select:focus {
+  background: var(--yellow);
+}
+
+/* ---------- Helpers ---------- */
+.row { display: flex; gap: 16px; }
+.col { display: flex; flex-direction: column; gap: 16px; }
+.center { display: grid; place-items: center; }
+.pop { animation: pop 600ms ease both; }
+@keyframes pop {
+  0% { transform: scale(0.6) rotate(-6deg); opacity: 0; }
+  70% { transform: scale(1.06) rotate(2deg); }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+.tilt-l { transform: rotate(-2deg); }
+.tilt-r { transform: rotate(2deg); }
+
+/* scrollbar (subtle 90s) */
+::-webkit-scrollbar { width: 14px; height: 14px; }
+::-webkit-scrollbar-track { background: var(--cream-deep); }
+::-webkit-scrollbar-thumb { background: var(--pink); border: 2px solid var(--ink); }
+
+/* Marquee */
+.marquee {
+  background: var(--ink);
+  color: var(--yellow);
+  border-top: var(--border-thick);
+  border-bottom: var(--border-thick);
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: 22px;
+  padding: 10px 0;
+  letter-spacing: 2px;
+}
+.marquee-track {
+  display: inline-flex;
+  gap: 40px;
+  white-space: nowrap;
+  animation: scroll-left 30s linear infinite;
+}
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-star { color: var(--pink); margin: 0 18px; }
+
+/* loading dots */
+.dotload { display: inline-flex; gap: 6px; }
+.dotload span {
+  width: 10px; height: 10px;
+  background: var(--ink);
+  border-radius: 50%;
+  animation: bouncy 900ms ease-in-out infinite;
+}
+.dotload span:nth-child(2) { animation-delay: 120ms; background: var(--pink); }
+.dotload span:nth-child(3) { animation-delay: 240ms; background: var(--cyan); }
+.dotload span:nth-child(4) { animation-delay: 360ms; background: var(--yellow); }
+@keyframes bouncy {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+}
+
+/* shake */
+.shake { animation: shake 350ms ease; }
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
