@@ -81,7 +81,7 @@ export default function Experience() {
         <span className="eyebrow cyan">★ TRACK.RECORD ★</span>
         <h2 className="section-title">Where I&apos;ve put in the reps.</h2>
         <p className="section-sub">
-          Enterprise SaaS, public companies, major acquisitions, and a long
+          Enterprise SaaS, media, public companies, major acquisitions, and a long
           earlier run that taught me the engine from sales-floor to roadmap.
           Names redacted on purpose — happy to walk through specifics on a call.
         </p>
