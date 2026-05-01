@@ -6,6 +6,9 @@ export const metadata = {
   title: 'Dovo Labs — Ethan Lippman',
   description:
     'Go-to-market strategist, competitive intel nerd, and AI builder. I help companies wire actually working revenue engines — then ship the bespoke AI tooling that runs them.',
+  icons: {
+    icon: '/dovo-labs-logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {
