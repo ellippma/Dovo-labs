@@ -80,7 +80,7 @@ export default function Consulting() {
             href="https://youvegotmeetings.com/book/ethan"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: 'var(--yellow)', borderBottom: '2px solid var(--yellow)', textDecoration: 'none' }}
+            style={{ color: 'var(--yellow)', borderBottom: '2px solid var(--yellow)', textDecoration: 'none', whiteSpace: 'nowrap' }}
           >
             Book 30 minutes with me →
           </a>

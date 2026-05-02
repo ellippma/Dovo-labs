@@ -14,7 +14,6 @@ export default function Book() {
       <div className="wrap" style={{ position: 'relative', zIndex: 1 }}>
         <div className="book-card">
           <div>
-            <span className="book-eyebrow">★ POWERED BY YOU&apos;VE GOT MEETINGS ★</span>
             <h2>Let&apos;s get<br />on a call.</h2>
             <p className="book-lede">
               GTM engineering, competitive intel, AI tooling for your revenue

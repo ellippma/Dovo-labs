@@ -97,17 +97,6 @@ export default function Hero() {
             >
               Book a meeting →
             </a>
-            <a
-              className="btn btn-ghost"
-              href="#projects"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }}
-              style={{ fontSize: 14 }}
-            >
-              See what I built
-            </a>
           </div>
         </div>
       </div>
