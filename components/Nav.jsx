@@ -13,13 +13,20 @@ const links = [
 export default function Nav() {
   const onClick = (e, id) => {
     e.preventDefault();
+    if (id === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     const el = document.getElementById(id);
-    if (el) window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' });
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
   };
 
   return (
     <div className="top-nav">
-      <a className="brand" href="#top" onClick={(e) => onClick(e, 'top')}>
+      <a className="brand" href="/" onClick={(e) => onClick(e, 'top')}>
         <BrandMark size={42} />
         <span>DOVO LABS</span>
       </a>

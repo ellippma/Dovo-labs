@@ -1,6 +1,7 @@
 import '../styles/colors_and_type.css';
 import '../styles/dovo.css';
 import '../styles/site.css';
+import ScrollReset from '../components/ScrollReset';
 
 export const metadata = {
   title: 'Dovo Labs — Ethan Lippman',
@@ -14,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body><ScrollReset />{children}</body>
     </html>
   );
 }
