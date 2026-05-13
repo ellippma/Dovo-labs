@@ -330,6 +330,9 @@ html, body { background: var(--cream); }
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
+.proj-grid.proj-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
 .proj-card {
   position: relative;
   border: 4px solid var(--ink);

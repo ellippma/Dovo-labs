@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Starburst } from './Decorative';
 
 export default function Projects() {
@@ -14,7 +15,7 @@ export default function Projects() {
           AI that does the homework so the human shows up smarter.
         </p>
 
-        <div className="proj-grid">
+        <div className="proj-grid proj-grid-2">
           <div className="proj-card pink tilt-l">
             <div className="corner-burst">
               <Starburst size={80} color="var(--yellow)" rotate={14}>LIVE</Starburst>
@@ -56,14 +57,57 @@ export default function Projects() {
             </span>
           </div>
 
-          <div className="proj-card placeholder tilt-l">
-            <div className="ph-inner">
-              <div style={{ fontFamily: 'var(--font-display-alt)', fontSize: 56, color: 'var(--purple)', lineHeight: 1, marginBottom: 8 }}>
-                ???
-              </div>
-              MORE TO COME
-              <div className="ph-sub">★ COOKING IN THE LAB ★</div>
+          <div className="proj-card yellow tilt-r">
+            <div className="corner-burst">
+              <Starburst size={80} color="var(--ink)" rotate={-10}>LIVE</Starburst>
             </div>
+            <div>
+              <span className="proj-tag">▶ APP.LIVE</span>
+              <h3>WordUp AI</h3>
+              <div className="proj-sub">★ Text to ears</div>
+              <p>
+                Any article, PDF, or URL — turned into audio with AI voices
+                that actually have personality. Nine voices, MP3 downloads,
+                bookmark your spot. Why read when you can listen?
+              </p>
+            </div>
+            <a
+              className="proj-link"
+              href="https://wordupai.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              wordupai.com →
+            </a>
+          </div>
+
+          <div className="proj-card purple tilt-l">
+            <div>
+              <Image
+                src="/alfred-logo.png"
+                alt="Alfred"
+                width={64}
+                height={64}
+                style={{ borderRadius: 14, marginBottom: 14, display: 'block' }}
+              />
+              <span className="proj-tag">▶ OPEN SOURCE</span>
+              <h3>Alfred</h3>
+              <div className="proj-sub">★ Your AI chief of staff</div>
+              <p>
+                A personal executive assistant that lives inside Claude Code.
+                Pulls from your calendar, Slack, email, and meeting transcripts
+                to deliver smart daily briefings — so you walk in already
+                knowing what matters.
+              </p>
+            </div>
+            <a
+              className="proj-link"
+              href="https://github.com/ellippma/Alfred-Public"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/ellippma/Alfred-Public →
+            </a>
           </div>
         </div>
       </div>
