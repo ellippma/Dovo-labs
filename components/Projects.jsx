@@ -20,16 +20,9 @@ export default function Projects() {
           {/* 1 — You've Got Meetings */}
           <div className="proj-card pink tilt-l">
             <div className="corner-burst">
-              <Starburst size={80} color="var(--yellow)" rotate={14}>LIVE</Starburst>
+              <Starburst size={72} color="var(--yellow)" rotate={14}>LIVE</Starburst>
             </div>
             <div>
-              <Image
-                src="/ygm-logo.png"
-                alt="You've Got Meetings logo"
-                width={54}
-                height={56}
-                className="proj-logo"
-              />
               <span className="proj-tag">▶ APP.LIVE</span>
               <h3>You&apos;ve Got<br />Meetings</h3>
               <div className="proj-sub">★ The flagship</div>
@@ -52,16 +45,9 @@ export default function Projects() {
           {/* 2 — WordUp AI */}
           <div className="proj-card yellow tilt-r">
             <div className="corner-burst">
-              <Starburst size={80} color="var(--pink)" rotate={-10}>LIVE</Starburst>
+              <Starburst size={72} color="var(--pink)" rotate={-10}>LIVE</Starburst>
             </div>
             <div>
-              <Image
-                src="/wordupai-logo.png"
-                alt="WordUp AI logo"
-                width={56}
-                height={56}
-                className="proj-logo"
-              />
               <span className="proj-tag">▶ APP.LIVE</span>
               <h3>WordUp AI</h3>
               <div className="proj-sub">★ Text to ears</div>
@@ -84,14 +70,14 @@ export default function Projects() {
           {/* 3 — Alfred */}
           <div className="proj-card purple tilt-l">
             <div className="corner-burst">
-              <Starburst size={80} color="var(--yellow)" rotate={14}>LIVE</Starburst>
+              <Starburst size={72} color="var(--yellow)" rotate={14}>LIVE</Starburst>
             </div>
             <div>
               <Image
                 src="/alfred-logo.png"
                 alt="Alfred logo"
-                width={56}
-                height={56}
+                width={52}
+                height={52}
                 className="proj-logo"
               />
               <span className="proj-tag">▶ OPEN SOURCE</span>
@@ -117,12 +103,6 @@ export default function Projects() {
           {/* 4 — Dovo */}
           <div className="proj-card cyan tilt-r">
             <div>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/dovo-logo.svg"
-                alt="Dovo logo"
-                className="proj-logo proj-logo-wide"
-              />
               <span className="proj-tag">▶ ARCHIVE</span>
               <h3>Dovo</h3>
               <div className="proj-sub">★ Retired — RIP</div>

@@ -10,7 +10,7 @@ export default function About() {
           Now I&apos;m rebuilding them with AI — faster, leaner, actually useful.
         </p>
 
-        <div className="about-card" style={{ maxWidth: 920 }}>
+        <div className="about-card">
           <p className="lede">
             I&apos;m who CEOs, CROs, and CMOs call when their GTM engine is
             messy, forecasts are vibes, and AI should be helping but isn&apos;t.
