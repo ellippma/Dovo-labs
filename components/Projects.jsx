@@ -82,6 +82,9 @@ export default function Projects() {
           </div>
 
           <div className="proj-card purple tilt-l">
+            <div className="corner-burst">
+              <Starburst size={80} color="var(--yellow)" rotate={14}>LIVE</Starburst>
+            </div>
             <div>
               <Image
                 src="/alfred-logo.png"
