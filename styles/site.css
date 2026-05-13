@@ -392,10 +392,23 @@ html, body { background: var(--cream); }
   position: absolute;
   top: -22px;
   right: -18px;
+  z-index: 2;
 }
 
-/* coming soon card */
+.proj-logo {
+  display: block;
+  margin-bottom: 14px;
+  border-radius: 10px;
+}
+.proj-logo-wide {
+  height: 32px;
+  width: auto;
+  border-radius: 0;
+}
+
+/* coming soon card — spans full grid width */
 .proj-card.placeholder {
+  grid-column: 1 / -1;
   background:
     repeating-linear-gradient(
       45deg,
@@ -406,21 +419,33 @@ html, body { background: var(--cream); }
     );
   border-style: dashed;
   border-width: 4px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
   text-align: center;
-  min-height: 320px;
 }
 .proj-card.placeholder .ph-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: var(--ink);
+}
+.proj-card.placeholder .ph-question {
+  font-family: var(--font-display-alt);
+  font-size: 56px;
+  color: var(--purple);
+  line-height: 1;
+}
+.proj-card.placeholder .ph-label {
   font-family: var(--font-display);
   font-size: 22px;
   letter-spacing: 1px;
-  color: var(--ink);
+  margin-bottom: 6px;
 }
 .proj-card.placeholder .ph-sub {
   font-family: var(--font-mono);
-  font-size: 15px;
-  margin-top: 8px;
+  font-size: 13px;
 }
 
 /* ============== CONSULTING ============== */
@@ -698,6 +723,9 @@ html, body { background: var(--cream); }
   .about-card { padding: 22px 20px; }
   .exp-card { padding: 22px 20px; }
   .proj-card { padding: 24px 20px; min-height: auto; }
+  .proj-card.placeholder { min-height: 120px; }
+  .proj-card.placeholder .ph-inner { flex-direction: column; gap: 8px; }
+  .proj-card.placeholder .ph-question { font-size: 40px; }
   .cons-card { padding: 22px 20px; gap: 14px; }
   .cons-card .cons-icon { width: 48px; height: 48px; font-size: 22px; }
   .book-card { padding: 32px 20px; box-shadow: 8px 8px 0 var(--ink); }

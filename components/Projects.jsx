@@ -16,11 +16,20 @@ export default function Projects() {
         </p>
 
         <div className="proj-grid proj-grid-2">
+
+          {/* 1 — You've Got Meetings */}
           <div className="proj-card pink tilt-l">
             <div className="corner-burst">
               <Starburst size={80} color="var(--yellow)" rotate={14}>LIVE</Starburst>
             </div>
             <div>
+              <Image
+                src="/ygm-logo.png"
+                alt="You've Got Meetings logo"
+                width={54}
+                height={56}
+                className="proj-logo"
+              />
               <span className="proj-tag">▶ APP.LIVE</span>
               <h3>You&apos;ve Got<br />Meetings</h3>
               <div className="proj-sub">★ The flagship</div>
@@ -40,28 +49,19 @@ export default function Projects() {
             </a>
           </div>
 
-          <div className="proj-card cyan tilt-r">
-            <div>
-              <span className="proj-tag">▶ ARCHIVE</span>
-              <h3>Dovo</h3>
-              <div className="proj-sub">★ Retired — RIP</div>
-              <p>
-                A competitive intelligence Slackbot. Ingested win/loss, deal
-                rooms, and battle cards; surfaced the right counter at the
-                right moment in the rep&apos;s actual workflow. The seed of how I
-                think about AI in revenue today.
-              </p>
-            </div>
-            <span className="proj-link" style={{ opacity: 0.45, cursor: 'default' }}>
-              Case study soon →
-            </span>
-          </div>
-
+          {/* 2 — WordUp AI */}
           <div className="proj-card yellow tilt-r">
             <div className="corner-burst">
-              <Starburst size={80} color="var(--ink)" rotate={-10}>LIVE</Starburst>
+              <Starburst size={80} color="var(--pink)" rotate={-10}>LIVE</Starburst>
             </div>
             <div>
+              <Image
+                src="/wordupai-logo.png"
+                alt="WordUp AI logo"
+                width={56}
+                height={56}
+                className="proj-logo"
+              />
               <span className="proj-tag">▶ APP.LIVE</span>
               <h3>WordUp AI</h3>
               <div className="proj-sub">★ Text to ears</div>
@@ -81,6 +81,7 @@ export default function Projects() {
             </a>
           </div>
 
+          {/* 3 — Alfred */}
           <div className="proj-card purple tilt-l">
             <div className="corner-burst">
               <Starburst size={80} color="var(--yellow)" rotate={14}>LIVE</Starburst>
@@ -88,10 +89,10 @@ export default function Projects() {
             <div>
               <Image
                 src="/alfred-logo.png"
-                alt="Alfred"
-                width={64}
-                height={64}
-                style={{ borderRadius: 14, marginBottom: 14, display: 'block' }}
+                alt="Alfred logo"
+                width={56}
+                height={56}
+                className="proj-logo"
               />
               <span className="proj-tag">▶ OPEN SOURCE</span>
               <h3>Alfred</h3>
@@ -112,6 +113,42 @@ export default function Projects() {
               github.com/ellippma/Alfred-Public →
             </a>
           </div>
+
+          {/* 4 — Dovo */}
+          <div className="proj-card cyan tilt-r">
+            <div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/dovo-logo.svg"
+                alt="Dovo logo"
+                className="proj-logo proj-logo-wide"
+              />
+              <span className="proj-tag">▶ ARCHIVE</span>
+              <h3>Dovo</h3>
+              <div className="proj-sub">★ Retired — RIP</div>
+              <p>
+                A competitive intelligence Slackbot. Ingested win/loss, deal
+                rooms, and battle cards; surfaced the right counter at the
+                right moment in the rep&apos;s actual workflow. The seed of how I
+                think about AI in revenue today.
+              </p>
+            </div>
+            <span className="proj-link" style={{ opacity: 0.45, cursor: 'default' }}>
+              Case study soon →
+            </span>
+          </div>
+
+          {/* 5 — Placeholder */}
+          <div className="proj-card placeholder">
+            <div className="ph-inner">
+              <div className="ph-question">???</div>
+              <div>
+                <div className="ph-label">MORE TO COME</div>
+                <div className="ph-sub">★ COOKING IN THE LAB ★</div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
