@@ -51,9 +51,9 @@ export default function Projects() {
                 think about AI in revenue today.
               </p>
             </div>
-            <a className="proj-link" href="#" onClick={(e) => e.preventDefault()}>
+            <span className="proj-link" style={{ opacity: 0.45, cursor: 'default' }}>
               Case study soon →
-            </a>
+            </span>
           </div>
 
           <div className="proj-card placeholder tilt-l">
